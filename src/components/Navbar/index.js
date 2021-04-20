@@ -12,8 +12,16 @@ export default function Navbar() {
   };
 
   const AnimaceNavbar = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: 1 } },
+    hidden: {
+      x: 850,
+      y: -1350,
+      transition: { duration: 1.5, ease: "easeInOut" },
+    },
+    show: {
+      x: 525,
+      y: -1020,
+      transition: { duration: 1.5, ease: "easeInOut" },
+    },
   };
 
   return (
@@ -26,18 +34,14 @@ export default function Navbar() {
         <span></span>
         <span></span>
       </div>
-      <div className="menuWrapper">
-        <h1>HEELLOOO</h1>
-      </div>
+
       <motion.div
         onClick={() => setIsOpen(!isOpen)}
-        className="forfun"
+        className="menuWrapper"
         variants={AnimaceNavbar}
         animate={isActive ? "show" : "hidden"}
         initial="hidden"
-      >
-        hellooooooooooooooo
-      </motion.div>
+      ></motion.div>
     </>
   );
 }

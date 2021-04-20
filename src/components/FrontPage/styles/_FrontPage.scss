@@ -1,0 +1,24 @@
+section {
+  height: 100vh;
+  background-color: red;
+}
+.homeWrapper {
+  height: 100vh;
+  background-color: red;
+
+  .thumbnailos {
+    position: relative;
+    overflow: hidden;
+    margin: 0rem 1rem;
+    .profilovka {
+      height: 32rem;
+      width: auto;
+      cursor: pointer;
+      z-index: 5;
+    }
+  }
+
+  .iconka {
+    color: #272727;
+  }
+}

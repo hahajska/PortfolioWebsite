@@ -1,7 +1,7 @@
 .hamburger {
   position: absolute;
-  top: 3vw;
-  right: 5vw;
+  top: 4vw;
+  right: 4vw;
   cursor: pointer;
   z-index: 5;
 
@@ -36,16 +36,12 @@
 
 .menuWrapper {
   position: absolute;
-  z-index: 0;
+  z-index: 2;
   background: red;
   height: 60rem;
   width: 60rem;
-  border-radius: 50%;
-  top: -100%;
-  right: -50%;
-}
-.menuWrapper.isActivni {
-  top: -50%;
-  right: -20%;
-  transition: all 4s ease-in-out;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom-left-radius: 50%;
 }
