@@ -1,5 +1,47 @@
 @import "./shared.scss";
 
+$main: #dbcab4;
+$white: #ffffff;
+$black: #1e1f13;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $main;
+  overflow: hidden;
+}
+
 p {
-  color: $base-color;
+  color: $black;
+}
+
+section {
+  height: 100vh;
+  background-color: $main;
+}
+.homeWrapper {
+  height: 100vh;
+  background-color: $main;
+
+  .thumbnailos {
+    position: relative;
+    overflow: hidden;
+    margin: 0rem 1rem;
+    .profilovka {
+      height: 32rem;
+      width: auto;
+      cursor: pointer;
+      z-index: 5;
+    }
+  }
+
+  .iconka {
+    color: #272727;
+  }
 }
