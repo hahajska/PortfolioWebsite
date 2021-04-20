@@ -1,7 +1,9 @@
+@import "../../../shared.scss";
+
 .hamburger {
   position: absolute;
-  top: 4vw;
-  right: 4vw;
+  top: 2.5vw;
+  right: 2.5vw;
   cursor: pointer;
   z-index: 5;
 
@@ -15,7 +17,7 @@
     z-index: 5;
     transform-origin: 0 0;
     transition: all 0.5s ease-in-out;
-    background-color: white;
+    background-color: $white;
   }
 }
 
@@ -37,11 +39,45 @@
 .menuWrapper {
   position: absolute;
   z-index: 2;
-  background: red;
+  background: $black;
   height: 60rem;
   width: 60rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-bottom-left-radius: 50%;
+  .textList {
+    margin: 0rem 0rem 7rem 8rem;
+    transform: rotate(-45deg);
+    li {
+      padding: 1.25rem 0rem;
+      font-size: 2rem;
+      cursor: pointer;
+      z-index: 20;
+    }
+    li:nth-child(1) {
+      color: white;
+      transform: rotate(15deg);
+      margin-left: 0.5rem;
+      &:hover {
+        color: red;
+      }
+    }
+    li:nth-child(2) {
+      color: white;
+      transform: rotate(5deg);
+      margin-left: -0.7rem;
+      &:hover {
+        color: rgba(153, 190, 29, 0.486);
+      }
+    }
+    li:nth-child(3) {
+      color: white;
+      transform: rotate(-5deg);
+      margin-left: -0.5rem;
+      &:hover {
+        color: rgb(19, 62, 180);
+      }
+    }
+  }
 }

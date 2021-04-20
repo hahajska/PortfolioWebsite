@@ -1,10 +1,8 @@
-section {
-  height: 100vh;
-  background-color: red;
-}
+@import "../../../shared.scss";
+
 .homeWrapper {
   height: 100vh;
-  background-color: red;
+  background-color: $main;
 
   .thumbnailos {
     position: relative;

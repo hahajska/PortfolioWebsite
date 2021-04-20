@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles/FrontPage.scss";
-import Profilovka from "./images/profilovka.jpg";
+import Profilovka from "../../images/profilovka.jpg";
 import { motion } from "framer-motion";
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };

@@ -20,7 +20,24 @@ export default function Navbar() {
     show: {
       x: 525,
       y: -1020,
-      transition: { duration: 1.5, ease: "easeInOut" },
+      transition: {
+        duration: 1.5,
+        ease: "easeInOut",
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+  const AnimaceChildren = {
+    hidden: {
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 1.5,
+        ease: "easeInOut",
+      },
     },
   };
 
@@ -37,11 +54,17 @@ export default function Navbar() {
 
       <motion.div
         onClick={() => setIsOpen(!isOpen)}
-        className="menuWrapper"
+        className="menuWrapper flex justify-end items-start flex-col"
         variants={AnimaceNavbar}
         animate={isActive ? "show" : "hidden"}
         initial="hidden"
-      ></motion.div>
+      >
+        <div className="textList">
+          <motion.li variants={AnimaceChildren}>Home</motion.li>
+          <motion.li variants={AnimaceChildren}>Support</motion.li>
+          <motion.li variants={AnimaceChildren}> Pricing</motion.li>
+        </div>
+      </motion.div>
     </>
   );
 }
