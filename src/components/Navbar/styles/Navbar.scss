@@ -1,83 +1,47 @@
-@import "../../../shared.scss";
-
-.hamburger {
+.navbarWrapper {
+  height: 100vh;
   position: absolute;
-  top: 2.5vw;
-  right: 2.5vw;
+  top: 0;
+  right: 0;
+  z-index: 50;
+  overflow: hidden;
+
+  .navbarList {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    background: lightcoral;
+    z-index: 1;
+    width: 40rem;
+    height: 110vh;
+    border-bottom-left-radius: 500px;
+    @media (max-width: 1280px) {
+      width: 36rem;
+    }
+    @media (max-width: 640px) {
+      width: 200%;
+    }
+    /*     .nic {
+      height: 100%;
+      background: rgba(255, 0, 0, 0.253);
+      border-bottom-left-radius: 500px;
+    } */
+  }
+}
+
+.navbarButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  z-index: 1000;
   cursor: pointer;
-  z-index: 5;
-
-  span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 4px;
-    position: relative;
-    border-radius: 6px;
-    z-index: 5;
-    transform-origin: 0 0;
-    transition: all 0.5s ease-in-out;
-    background-color: $white;
-  }
 }
 
-.hamburger:hover span:nth-child(2) {
-  transform: translateX(10px);
+.nadListItem {
+  height: 100vh;
 }
-
-.hamburger.isActive span:nth-child(1) {
-  transform: translate(0px, -4px) rotate(45deg);
-}
-.hamburger.isActive span:nth-child(2) {
-  transform: translateX(15px);
-  opacity: 0;
-}
-.hamburger.isActive span:nth-child(3) {
-  transform: translate(-2.5px, 3px) rotate(-45deg);
-}
-
-.menuWrapper {
-  position: absolute;
-  z-index: 2;
-  background: $black;
-  height: 60rem;
-  width: 60rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-bottom-left-radius: 50%;
-  .textList {
-    margin: 0rem 0rem 7rem 8rem;
-    transform: rotate(-45deg);
-    li {
-      padding: 1.25rem 0rem;
-      font-size: 2rem;
-      cursor: pointer;
-      z-index: 20;
-    }
-    li:nth-child(1) {
-      color: white;
-      transform: rotate(15deg);
-      margin-left: 0.5rem;
-      &:hover {
-        color: red;
-      }
-    }
-    li:nth-child(2) {
-      color: white;
-      transform: rotate(5deg);
-      margin-left: -0.7rem;
-      &:hover {
-        color: rgba(153, 190, 29, 0.486);
-      }
-    }
-    li:nth-child(3) {
-      color: white;
-      transform: rotate(-5deg);
-      margin-left: -0.5rem;
-      &:hover {
-        color: rgb(19, 62, 180);
-      }
-    }
-  }
+.listItem {
+  width: 100%;
+  background: lightcyan;
 }

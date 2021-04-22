@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./styles/Navbar.scss";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
+import Items from "./Items/Items";
 
 export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
@@ -18,53 +19,137 @@ export default function Navbar() {
       transition: { duration: 1.5, ease: "easeInOut" },
     },
     show: {
-      x: 525,
-      y: -1020,
+      x: 0,
+      y: 0,
       transition: {
-        duration: 1.5,
+        duration: 1.25,
         ease: "easeInOut",
-        staggerChildren: 0.5,
+        when: "beforeChildren",
       },
     },
   };
 
-  const AnimaceChildren = {
-    hidden: {
-      opacity: 0,
-    },
+  const childVariants = {
     show: {
+      x: 0,
       opacity: 1,
       transition: {
-        duration: 1.5,
-        ease: "easeInOut",
+        duration: 0.5,
       },
+    },
+    hidden: {
+      x: -20,
+      opacity: 0,
+    },
+  };
+
+  const childVariants2 = {
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.56,
+      },
+    },
+    hidden: {
+      x: -20,
+      opacity: 0,
+    },
+  };
+  const childVariants3 = {
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.57,
+      },
+    },
+    hidden: {
+      x: -20,
+      opacity: 0,
+    },
+  };
+  const childVariants4 = {
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.58,
+      },
+    },
+    hidden: {
+      x: -20,
+      opacity: 0,
+    },
+  };
+  const childVariants5 = {
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.59,
+      },
+    },
+    hidden: {
+      x: -20,
+      opacity: 0,
+    },
+  };
+  const childVariants6 = {
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+      },
+    },
+    hidden: {
+      x: -20,
+      opacity: 0,
     },
   };
 
   return (
     <>
-      <div
-        className={isActive ? " hamburger isActive" : "hamburger "}
-        onClick={handleActive}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <motion.div
-        onClick={() => setIsOpen(!isOpen)}
-        className="menuWrapper flex justify-end items-start flex-col"
-        variants={AnimaceNavbar}
-        animate={isActive ? "show" : "hidden"}
-        initial="hidden"
-      >
-        <div className="textList">
-          <motion.li variants={AnimaceChildren}>Home</motion.li>
-          <motion.li variants={AnimaceChildren}>Support</motion.li>
-          <motion.li variants={AnimaceChildren}> Pricing</motion.li>
+      <div className="navik bg-red-500">
+        <div className="navbarButton" onClick={handleActive}>
+          X
         </div>
-      </motion.div>
+
+        <div className="navbarWrapper xl:w-80 lg:w-72 md:w-72 sm:w-72 w-full">
+          <motion.div
+            className="navbarList grid grid-cols-2"
+            variants={AnimaceNavbar}
+            animate={isActive ? "show" : "hidden"}
+            initial="hidden"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <div className="nic">1</div>
+            <div className="navbarSeznam">
+              <ul className="nadListItem text-center flex items-center flex-col justify-center">
+                <motion.li variants={childVariants} className="listItem">
+                  Home
+                </motion.li>
+                <motion.li variants={childVariants2} className="listItem">
+                  Support
+                </motion.li>
+                <motion.li variants={childVariants3} className="listItem">
+                  Home
+                </motion.li>
+                <motion.li variants={childVariants4} className="listItem">
+                  Support
+                </motion.li>
+                <motion.li variants={childVariants5} className="listItem">
+                  Home
+                </motion.li>
+                <motion.li variants={childVariants6} className="listItem">
+                  Support
+                </motion.li>
+              </ul>
+            </div>
+          </motion.div>
+        </div>
+      </div>
     </>
   );
 }
