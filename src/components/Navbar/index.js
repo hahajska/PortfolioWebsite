@@ -16,13 +16,13 @@ export default function Navbar() {
     hidden: {
       x: 850,
       y: -1350,
-      transition: { duration: 1.5, ease: "easeInOut" },
+      transition: { duration: 2, ease: "easeInOut" },
     },
     show: {
       x: 0,
       y: 0,
       transition: {
-        duration: 1.25,
+        duration: 1.5,
         ease: "easeInOut",
         when: "beforeChildren",
       },
@@ -38,7 +38,7 @@ export default function Navbar() {
       },
     },
     hidden: {
-      x: -20,
+      x: 20,
       opacity: 0,
     },
   };
@@ -48,11 +48,11 @@ export default function Navbar() {
       x: 0,
       opacity: 1,
       transition: {
-        duration: 0.56,
+        duration: 0.55,
       },
     },
     hidden: {
-      x: -20,
+      x: 20,
       opacity: 0,
     },
   };
@@ -61,11 +61,11 @@ export default function Navbar() {
       x: 0,
       opacity: 1,
       transition: {
-        duration: 0.57,
+        duration: 0.6,
       },
     },
     hidden: {
-      x: -20,
+      x: 20,
       opacity: 0,
     },
   };
@@ -74,11 +74,11 @@ export default function Navbar() {
       x: 0,
       opacity: 1,
       transition: {
-        duration: 0.58,
+        duration: 0.65,
       },
     },
     hidden: {
-      x: -20,
+      x: 20,
       opacity: 0,
     },
   };
@@ -87,11 +87,11 @@ export default function Navbar() {
       x: 0,
       opacity: 1,
       transition: {
-        duration: 0.59,
+        duration: 0.7,
       },
     },
     hidden: {
-      x: -20,
+      x: 20,
       opacity: 0,
     },
   };
@@ -100,11 +100,11 @@ export default function Navbar() {
       x: 0,
       opacity: 1,
       transition: {
-        duration: 0.6,
+        duration: 0.75,
       },
     },
     hidden: {
-      x: -20,
+      x: 20,
       opacity: 0,
     },
   };
@@ -112,8 +112,13 @@ export default function Navbar() {
   return (
     <>
       <div className="navik bg-red-500">
-        <div className="navbarButton" onClick={handleActive}>
-          X
+        <div
+          onClick={handleActive}
+          className={isActive ? " navbarButton isActive" : "navbarButton"}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
 
         <div className="navbarWrapper xl:w-80 lg:w-72 md:w-72 sm:w-72 w-full">
@@ -128,22 +133,22 @@ export default function Navbar() {
             <div className="navbarSeznam">
               <ul className="nadListItem text-center flex items-center flex-col justify-center">
                 <motion.li variants={childVariants} className="listItem">
-                  Home
+                  HOME
                 </motion.li>
                 <motion.li variants={childVariants2} className="listItem">
-                  Support
+                  PRICES
                 </motion.li>
                 <motion.li variants={childVariants3} className="listItem">
-                  Home
+                  CRYPTO
                 </motion.li>
                 <motion.li variants={childVariants4} className="listItem">
-                  Support
+                  SWAP
                 </motion.li>
                 <motion.li variants={childVariants5} className="listItem">
-                  Home
+                  PORTFOLIO
                 </motion.li>
                 <motion.li variants={childVariants6} className="listItem">
-                  Support
+                  SUPPORT
                 </motion.li>
               </ul>
             </div>

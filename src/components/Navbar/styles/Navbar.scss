@@ -10,7 +10,7 @@
     position: absolute;
     top: 0rem;
     right: 0rem;
-    background: lightcoral;
+    background: #f2c9dc;
     z-index: 1;
     width: 40rem;
     height: 110vh;
@@ -31,11 +31,38 @@
 
 .navbarButton {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 2rem;
+  right: 2rem;
   font-size: 2rem;
   z-index: 1000;
   cursor: pointer;
+  padding: 0.75rem;
+  span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin-bottom: 4px;
+    position: relative;
+    border-radius: 6px;
+    z-index: 5;
+    transform-origin: 0 0;
+    transition: all 0.5s ease-in-out;
+    background-color: #943561;
+  }
+}
+.navbarButton:hover span:nth-child(2) {
+  transform: translateX(10px);
+}
+
+.navbarButton.isActive span:nth-child(1) {
+  transform: translate(0px, -4px) rotate(45deg);
+}
+.navbarButton.isActive span:nth-child(2) {
+  transform: translateX(15px);
+  opacity: 0;
+}
+.navbarButton.isActive span:nth-child(3) {
+  transform: translate(15.3px, 1.5px) rotate(-45deg);
 }
 
 .nadListItem {
@@ -43,5 +70,11 @@
 }
 .listItem {
   width: 100%;
-  background: lightcyan;
+  margin: 1rem 0rem;
+  padding: 1.25rem 0rem;
+  cursor: pointer;
+  color: #943561;
+  &:hover {
+    background: #f6b6d4;
+  }
 }
