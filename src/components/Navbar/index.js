@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import "./styles/Navbar.scss";
-import { motion, Variants } from "framer-motion";
-import Items from "./Items/Items";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleActive = () => {
+  const handleActive = ({}) => {
     setIsActive(!isActive);
   };
 
@@ -108,7 +107,6 @@ export default function Navbar() {
       opacity: 0,
     },
   };
-
   return (
     <>
       <div className="navik bg-red-500">
@@ -129,7 +127,7 @@ export default function Navbar() {
             initial="hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <div className="nic">1</div>
+            <div></div>
             <div className="navbarSeznam">
               <ul className="nadListItem text-center flex items-center flex-col justify-center">
                 <motion.li variants={childVariants} className="listItem">
