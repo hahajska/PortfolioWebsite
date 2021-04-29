@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import Mountains from "../../images/moutains.jpg";
 import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 import { TimelineLite, Power2, gsap } from "gsap";
+import "./styles/_Main.scss";
 
 export default function Main() {
   let image = useRef(null);
@@ -18,16 +19,15 @@ export default function Main() {
       ease: Power2.easeInOut,
       delay: -1.4,
     });
-  }, [imageReveal]);
+  }, []);
 
   return (
     <section className="mainSection lg:container lg:mx-auto grid lg:grid-cols-6 md:grid-rows-1">
-      <div className="leftImage lg:col-span-4">
+      <div className="leftImage lg:col-span-4 sm:order-first order-last">
         <div ref={(el) => (container = el)} className="container">
           <>
             <div className="img-container text-center">
               <img ref={(el) => (image = el)} src={Mountains} alt="" />
-              <p className="pt-4 ">SCROLL DOWN</p>
             </div>
           </>
         </div>

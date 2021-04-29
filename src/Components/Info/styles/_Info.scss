@@ -1,0 +1,23 @@
+.infoSection {
+  height: 100vh;
+  .longImage {
+    height: 120vh;
+    position: relative;
+    img {
+      height: 115vh;
+    }
+  }
+  .infoText2 {
+    height: 60vh;
+    background: lightgray;
+  }
+}
+.textAbout {
+  min-height: 40vh;
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    text-align-last: right;
+  }
+}
