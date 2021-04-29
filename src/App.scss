@@ -6,11 +6,35 @@
   box-sizing: border-box;
   list-style-type: none;
 }
-
-body {
-  padding: 0;
-  margin: 0;
-  background-color: $main;
+.main {
+  .container {
+    width: 1440px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+  }
+}
+.img-container {
+  width: 1440px;
+  height: 50rem;
+  position: relative;
   overflow: hidden;
-  font-family: "Montserrat", sans-serif;
+  &:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    top: 0;
+    right: 0;
+  }
+  img {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
+.space {
+  height: 300vh;
 }
