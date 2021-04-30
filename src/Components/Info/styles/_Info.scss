@@ -1,5 +1,4 @@
 .infoSection {
-  height: 100vh;
   .longImage {
     height: 120vh;
     position: relative;
@@ -8,7 +7,7 @@
     }
   }
   .infoText2 {
-    height: 60vh;
+    height: 40vh;
     background: lightgray;
   }
 }
@@ -20,4 +19,18 @@
   p {
     text-align-last: right;
   }
+  button {
+    outline: none;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 0.1rem 1.75rem;
+
+    &:hover {
+      background: black;
+      color: #fff;
+    }
+  }
+}
+.cara {
+  position: absolute;
 }

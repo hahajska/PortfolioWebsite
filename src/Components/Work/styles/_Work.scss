@@ -1,0 +1,45 @@
+.workSection {
+  position: relative;
+
+  .textWork {
+    height: 50vh;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: -0.75rem;
+    }
+    span {
+      font-size: 1rem;
+    }
+  }
+  .imageWork {
+    height: 50vh;
+    position: relative;
+    @media (max-width: 1024px) {
+      height: max-content;
+    }
+    .smallImage {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      height: 25vh;
+    }
+    .smallImage2 {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      height: 25vh;
+    }
+    .bigImage {
+      height: 90%;
+    }
+  }
+}
+.nadpisWork {
+  height: max-content;
+  margin-top: 10rem;
+  h1 {
+    font-size: 3rem;
+    font-weight: 100;
+    letter-spacing: -1px;
+  }
+}
