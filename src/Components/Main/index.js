@@ -27,14 +27,19 @@ export default function Main() {
         <div ref={(el) => (container = el)} className="container">
           <>
             <div className="img-container text-center">
-              <img ref={(el) => (image = el)} src={Mountains} alt="" />
+              <img
+                ref={(el) => (image = el)}
+                src={Mountains}
+                alt="img"
+                loading="lazy"
+              />
             </div>
           </>
         </div>
       </div>
       <div className="rightText lg:col-span-2 flex justify-start flex-column items-center lg:px-5 lg:py-2 py-40 px-5 ">
         <div className="textBox px-2">
-          <h1>Tomas Schlogl</h1>
+          <h1>Name Surname</h1>
           <span className="px-1">FE Developer</span>
           <p className="px-1 pr-5 pt-5 text-left">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem

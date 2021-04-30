@@ -1,0 +1,22 @@
+.sectionFooter {
+  .leftLinksDiv {
+    height: 60vh;
+
+    .fastLinks {
+      font-size: 4rem;
+      li {
+        cursor: pointer;
+        color: rgb(77, 77, 77);
+        &:hover {
+          color: rgb(0, 0, 0);
+        }
+      }
+    }
+  }
+  .footerInfo {
+    height: 60vh;
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+}

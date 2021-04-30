@@ -32,7 +32,7 @@ export default function Info() {
         </div>
       </div>
       <div className="longImage hidden lg:flex lg:col-span-2 flex items-center justify-center px-12">
-        <img src={LongImage} alt="image" />
+        <img src={LongImage} alt="image" loading="lazy" />
       </div>
     </section>
   );
