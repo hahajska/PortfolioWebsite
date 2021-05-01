@@ -19,7 +19,8 @@
     "react-progressive-image": "^0.6.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.1"
+    "web-vitals": "^1.1.1",
+    "postcss": "^7.0.35"
   },
   "scripts": {
     "start": "craco start",
@@ -45,10 +46,9 @@
       "last 1 safari version"
     ]
   },
-  "development": {
+  "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.1.0",
     "autoprefixer": "^9.8.6",
-    "postcss": "^7.0.35",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.0"
   }
 }
