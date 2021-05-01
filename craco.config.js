@@ -10,4 +10,5 @@ module.exports = {
       "nuxt.config.js",
     ],
   },
+  include: [path.resolve(__dirname, "src", "styles")],
 };
