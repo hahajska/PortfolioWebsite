@@ -1,7 +1,4 @@
-$base-color: #c6538c;
-$main: #dddddd;
-$white: #ffffff;
-$black: #1e1f13;
+@import "./shared.scss";
 
 * {
   margin: 0;
@@ -10,7 +7,3 @@ $black: #1e1f13;
   list-style-type: none;
   font-family: "Cabinet Grotesk", sans-serif;
 }
-@import "./components/Info/styles/Info";
-@import "./components/Work/styles/Work";
-@import "./components/Footer/styles/Footer";
-@import "./components/Main/styles/Main";
