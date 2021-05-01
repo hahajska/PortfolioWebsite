@@ -1,9 +1,13 @@
 // craco.config.js
 module.exports = {
-  style: {
-    postcss: {
-      plugins: [require("tailwindcss"), require("autoprefixer")],
-    },
-  },
-  purge: [`purge: false`],
+  purge: [
+    "./pages/**/*.vue",
+    "./components/**/*.vue",
+    "./plugins/**/*.vue",
+    "./static/**/*.vue",
+    "./store/**/*.vue",
+  ],
+  theme: {},
+  variants: {},
+  plugins: [],
 };
